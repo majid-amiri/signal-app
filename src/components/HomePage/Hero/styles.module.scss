@@ -1,0 +1,99 @@
+.hero {
+  position: relative;
+  background: rgb(43, 99, 217);
+  background: -moz-linear-gradient(
+    0deg,
+    rgba(43, 99, 217, 1) 0%,
+    rgba(57, 113, 231, 1) 100%
+  );
+  background: -webkit-linear-gradient(
+    0deg,
+    rgba(43, 99, 217, 1) 0%,
+    rgba(57, 113, 231, 1) 100%
+  );
+  background: linear-gradient(
+    0deg,
+    rgba(43, 99, 217, 1) 0%,
+    rgba(57, 113, 231, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#2b63d9",endColorstr="#3971e7",GradientType=1);
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .content {
+    z-index: 1;
+    max-width: 600px;
+    text-align: center;
+    color: white;
+  }
+
+  .solarSystem {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    z-index: 0;
+
+    .orbitWrapper {
+      position: absolute;
+      animation: orbit 100s infinite linear;
+
+      .orbit {
+      }
+
+      .planet {
+        width: 40px;
+        height: 40px;
+        background: radial-gradient(
+          90.6% 100% at 50% 0%,
+          rgba(255, 255, 255, 0.16) 0%,
+          rgba(255, 255, 255, 0) 100%
+        );
+        border-radius: 100%;
+        position: absolute;
+        &::before {
+          content: "";
+        }
+      }
+    }
+
+    @keyframes orbit {
+      from {
+        transform: rotate(0deg);
+      }
+      to {
+        transform: rotate(360deg);
+      }
+    }
+  }
+
+  .searchBar {
+    width: 100%;
+    background-color: white;
+    display: flex;
+    border-radius: 16px;
+    padding: 8px;
+    margin-top: 32px;
+
+    input {
+      background-color: #f3f6fd;
+      border-radius: 16px;
+      border: none;
+      flex: 1;
+      margin-right: 8px;
+      padding: 0 8px;
+      font-weight: 700;
+      font-size: 16px;
+
+      &::placeholder {
+        color: #538ff8;
+      }
+    }
+  }
+}

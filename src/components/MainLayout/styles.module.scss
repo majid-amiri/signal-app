@@ -1,0 +1,38 @@
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+
+  nav {
+    a {
+      color: white;
+      text-decoration: none;
+      &:not(:first-child) {
+        margin-left: 48px;
+      }
+
+      &.selected {
+        position: relative;
+        &::after {
+          content: "";
+          position: absolute;
+          height: 3px;
+          width: 100%;
+          border-radius: 10px;
+          bottom: -8px;
+          left: 0;
+          background-color: white;
+        }
+      }
+    }
+  }
+}
+
+.absolute {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 1;
+}

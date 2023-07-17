@@ -1,0 +1,22 @@
+.button {
+  padding: 0 8px;
+  height: 48px;
+  font-weight: 700;
+  border: unset;
+  border-radius: 12px;
+
+  &.primary {
+    color: white;
+    background-color: #2b63d9;
+  }
+
+  &.secondary {
+    color: #1f2126;
+    background-color: #ffb21b;
+  }
+
+  &.text {
+    color: white;
+    background-color: transparent;
+  }
+}
