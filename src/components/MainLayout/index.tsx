@@ -12,9 +12,7 @@ export const MainLayout: MainLayoutProps = ({ children }) => {
   return (
     <>
       <header
-        className={cx({
-          [styles.absolute]: window.location.pathname === "/",
-        })}
+        className={cx(styles.absolute)} // should be conditionally later
       >
         <Container>
           <div className={cx(styles.header)}>
@@ -23,12 +21,12 @@ export const MainLayout: MainLayoutProps = ({ children }) => {
             </div>
 
             <nav>
-              <a href="#" className={styles.selected}>
+              <a href="/" className={styles.selected}>
                 Home
               </a>
-              <a href="#">Explore</a>
-              <a href="#">Pricing</a>
-              <a href="#">Contact Us</a>
+              <a href="/">Explore</a>
+              <a href="/">Pricing</a>
+              <a href="/">Contact Us</a>
             </nav>
 
             <div>
